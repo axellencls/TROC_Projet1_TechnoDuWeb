@@ -1,0 +1,96 @@
+/////////////////////COLLECTION MEMBRES////////////////////////////
+{
+        "_id" : ObjectId("5bab948452eaf8e7c1834e09"),
+        "email" : "jojo@gmail.com",
+        "mdp" : "12345",
+        "nom" : "Dupre",
+        "prenom" : "Joel",
+        "role" : "admin",
+        "ville" : "Nantes",
+        "adresse" : "2 rue du papillon",
+        "tel" : "0333333333"
+}
+{
+        "_id" : ObjectId("5bab952752eaf8e7c1834e0a"),
+        "email" : "mf-jesuis@gmail.com",
+        "mdp" : "azerty",
+        "nom" : "Boudore",
+        "prenom" : "Marie-France",
+        "role" : "user",
+        "ville" : "Paris",
+        "adresse" : "308 boulevard de la paperrasse",
+        "tel" : "0456464578"
+}
+
+/////////////////////COLLECTION BIENS////////////////////////////
+{
+        "_id" : ObjectId("5bab9c5b52eaf8e7c1834e0d"),
+        "emailM" : "mf-jesuis@gmail.com",
+        "motCles" : [
+                "ventilateur",
+                "enceintes bluetooth"
+        ],
+        "descrictif" : [
+                "grand ventilo à plusieurs fonctionnalités",
+                "enceintes SONY haute gamme pour mieux écouter de la musique"
+        ],
+        "lienPhotos" : [
+                "lien ventilo",
+                "lien enceintes"
+        ],
+        "prix" : [
+                "25",
+                "70"
+        ]
+}
+
+/////////////////////COLLECTION COMPETENCES////////////////////////////
+{
+        "_id" : ObjectId("5bab99bc52eaf8e7c1834e0b"),
+        "emailM" : "jojo@gmail.com",
+        "motCles" : [
+                "cours anglais",
+                "cours espagnol",
+                "cours allemand"
+        ],
+        "descrictif" : "cours pour lycéen, collegien ou étudiant",
+        "semaines" : [
+                "lundi",
+                "jeudi",
+                "samedi"
+        ],
+        "horaires" : [
+                "matinée",
+                "10h30 à 13h30",
+                "toute la journée"
+        ]
+}
+{
+        "_id" : ObjectId("5bab9aa452eaf8e7c1834e0c"),
+        "emailM" : "mf-jesuis@gmail.com",
+        "motCles" : [
+                "cours guitare"
+        ],
+        "descrictif" : "cours débutant",
+        "semaines" : [
+                "jeudi",
+                "vendredi"
+        ],
+        "horaires" : [
+                "17h à 21h"
+        ]
+}
+
+/////////////////////COLLECTION UTILISATIONS////////////////////////////
+{
+        "_id" : ObjectId("5bab9d4d52eaf8e7c1834e0e"),
+        "emailM" : "jojo@gmail.com",
+        "idCompetenceOuBien" : "CCoursAnglais",
+        "date" : "20/09/2018"
+}
+{
+        "_id" : ObjectId("5bab9d7b52eaf8e7c1834e0f"),
+        "emailM" : "jojo@gmail.com",
+        "idCompetenceOuBien" : "CCoursEspagnol",
+        "date" : "01/12/2017"
+}
