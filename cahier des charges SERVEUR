@@ -1,0 +1,34 @@
+
+
+FONCTIONNALITES UTILISATEURS
+
+Rechercher biens et ou competences par mots clés : .../:motCle. DONNEES EN SORTIE : le mot clé, biens / competences complets
+
+Rechercher biens et ou competences via un membre : .../:membre/offre DONNEES EN SORTIE : le mot clé, biens / competences complets, nom et prenom de lutilisateur
+
+
+Afficher recap d'un service : .../recap/:idReservation : données de sortie : email,nom prenom proprio, email demandeur, service complet
+
+FONCTIONNALITES ADMINISTRATEUR
+Lister tous les membres inscrit .../membres => données de sortie : liste les membres (tout les champs sauf MDP)
+
+Rechercher un membre inscrit .../:membre => données de sortie : le membre (tout les champs sauf MDP)
+
+
+FONCTIONS FONDAMENTALES/MINIMALES : 
+if (C ou B)
+{
+Afficher un bien: .../:id => tous les champs du service
+Afficher une competence : .../:id => tous les champs du service
+}
+
+Rechercher un membre inscrit .../:membre => données de sortie : le membre (tout les champs sauf MDP)
+
+Afficher recap d'un service : .../recap/:idReservation : données de sortie : email,nom prenom proprio, email demandeur, service complet
+
+
+AJOUT DANS DB :
+membres
+competences
+biens
+//reservations
