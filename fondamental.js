@@ -53,6 +53,21 @@ function rechercheReservationParId(db, id, callback) {
 	
 }
 
+function rechercheBienParMotCle(db, motCle, resServices, callback){
+    let resB = [] ;
+    //Rzchercher les biens par mots clés pb car le champ mot clé du JSON est un tableau
+    for( i<4)
+    {
+	db.collection("Biens").find("motCle":motCle[i]).toArray((err, documents)=> {
+		resR.push(documents[0]);
+		callback(JSON.stringify(resR));
+	});
+    }
+}
+
+
+// Recherche d'un service via un mot clé
+
 
 MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
     let db = client.db("DB_TROC");
@@ -85,6 +100,19 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
 	    	res.setHeader("Content-type", "application/json");
 	        res.end(resM) ;
 	    });
+    });
+
+    app.get("/rechercheService/:motCle", (req, res) => {
+	rechercheServiceParMotCle(db, req.params.motCle, (res)=> {
+	    res.setHeader("Content-type", "application/json");
+	    let resServices=[];
+	    //Recherche dans les biens
+	    rechercheBienParMotCle(db, req.params.motCle, resServices, (resBiens)=>{
+		resServices.push(resBiens);
+	    });
+	    //Recherche dans les competences
+	    res.end(resMotCle);
+	});
     });
     
 });
