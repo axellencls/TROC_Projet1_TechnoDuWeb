@@ -67,3 +67,11 @@
             {"lundi":[{"debut":"18","fin":"21"}]}
         ]
 }]
+
+///////////////////COLLECTION RESERVATIONS////////////////////////////
+[{
+    "emailProprio": "jojo@gmail.com",
+    "emailUtilisateur": "mf-jesuis@gmail.com",
+    "idService": "B1", //B... ou C...
+    "date": "13/09/2018"
+}]
