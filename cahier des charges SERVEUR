@@ -22,7 +22,7 @@ Afficher un bien: .../:id => tous les champs du service
 Afficher une competence : .../:id => tous les champs du service
 }
 
-Rechercher un membre inscrit .../:membre => données de sortie : le membre (tout les champs sauf MDP)
+Rechercher un membre inscrit .../:mailMembre => données de sortie : le membre (tout les champs sauf MDP)
 
 Afficher recap d'un service : .../recap/:idReservation : données de sortie : email,nom prenom proprio, email demandeur, service complet
 
