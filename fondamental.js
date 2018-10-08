@@ -108,6 +108,7 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
 
     app.get("/rechercheService/:motCle", (req, res) => {
 	rechercheServiceParMotCle(db, req.params.motCle, (res)=> {
+		res.setHeader('Access-Control-Allow-Origin', '*');
 	    res.setHeader("Content-type", "application/json");
 	    let resServices=[];
 	    //Recherche dans les biens
