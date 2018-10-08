@@ -75,6 +75,7 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
     
 	app.get("/biens/:id", (req, res) => {
 	    rechercheBienParId(db, req.params.id, (resBien)=> {
+		res.setHeader('Access-Control-Allow-Origin', '*');		
 	    	res.setHeader("Content-type", "application/json");
 	    	//console.log("Deux : " + resBien) ;
 	        res.end(resBien) ;
@@ -83,6 +84,7 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
     
     app.get("/competences/:id", (req, res) => {
 	    rechercheCompetenceParId(db, req.params.id, (resComp)=> {
+		    res.setHeader('Access-Control-Allow-Origin', '*');
 	    	res.setHeader("Content-type", "application/json");
 	        res.end(resComp) ;
 	    });
@@ -90,6 +92,7 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
     
     app.get("/reservations/:id", (req, res) => {
 	    rechercheReservationParId(db, req.params.id, (resR)=> {
+		    res.setHeader('Access-Control-Allow-Origin', '*');
 	    	res.setHeader("Content-type", "application/json");
 	        res.end(resR) ;
 	    });
@@ -97,6 +100,7 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
     
     app.get("/membres/:email", (req, res) => {
 	    rechercheMembreParEmail(db, req.params.email, (resM)=> {
+		    res.setHeader('Access-Control-Allow-Origin', '*');
 	    	res.setHeader("Content-type", "application/json");
 	        res.end(resM) ;
 	    });
