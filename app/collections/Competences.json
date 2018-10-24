@@ -1,0 +1,25 @@
+[{
+    "id":"C1",
+        "emailProprio" : "jojo@gmail.com",
+        "motsCles" : [
+                "cours anglais",
+                "cours espagnol",
+                "cours allemand"
+        ],
+        "description" : "cours pour lycéen, collegien ou étudiant",
+        "disponibilite" : [
+            {"lundi":[{"debut":"8","fin":"9"} ,{"debut":"20","fin":"22"}]},
+            {"jeudi":[{"debut":"13","fin":"18"}]}
+        ]
+},
+ {
+     "id":"C2",
+        "emailProprio" : "mf-jesuis@gmail.com",
+        "motsCles" : [
+                "cours guitare"
+        ],
+        "description" : "cours débutant",
+        "disponibilite" : [
+            {"lundi":[{"debut":"18","fin":"21"}]}
+        ]
+}]

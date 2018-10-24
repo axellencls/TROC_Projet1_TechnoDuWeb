@@ -1,0 +1,29 @@
+//[{
+//	"ID":"B001",
+//	"mots clefs":["outils", "marteau"],
+//	"lien photo":"http//www.photo",
+//	"prix neuf": "12€"
+//}]
+
+
+[{
+        "email" : "jojo@gmail.com",
+        "mdp" : "12345",
+        "nom" : "Dupre",
+        "prenom" : "Joel",
+        "role" : "1",  //0 ou 1 (pour admin)
+        "ville" : "Nantes",
+        "adresse" : "2 rue du papillon",
+        "tel" : "0333333333"
+}
+{
+        "email" : "mf-jesuis@gmail.com",
+        "mdp" : "azerty",
+        "nom" : "Boudore",
+        "prenom" : "Marie-France",
+        "role" : "0", //0 ou 1 (pour admin)
+        "ville" : "Paris",
+        "adresse" : "308 boulevard de la paperrasse",
+        "tel" : "0456464578"
+}
+]

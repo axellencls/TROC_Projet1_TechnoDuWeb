@@ -1,0 +1,17 @@
+[{
+    "id" : "B1",
+    "motsCles": "voiture",
+    "lienPhoto": "lien photo voiture",
+    "prix": "1000",
+    "emailProprio" : "email2@free.fr",
+    "disponible":"0" 
+	},
+ {
+     "id" : "B2",
+     "motsCles": "tee shirt",
+     "lienPhoto": "lien photo t shirt",
+     "prix": "38",
+     "emailProprio" : "jojo@gmail.com",
+     "disponible":"1" 
+	}
+]
