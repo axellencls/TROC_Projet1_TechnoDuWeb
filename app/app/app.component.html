@@ -1,0 +1,15 @@
+<div style="text-align:center">
+  <header>
+    Bienvenue sur le site en ligne de {{title}}
+  </header>
+</div>
+<div>
+  <app-liste-membres></app-liste-membres>
+  
+  <label> Entrez l'email d'un membre </label> <input type="text" [(ngModel)]="email"/> {{email}}
+  <!--<app-recherche-membre [nomDuMembre]="email"></app-recherche-membre>-->
+  <a [routerLink]="['/membres', email]">Rechercher le membre avec l'email {{email}}</a>
+	<router-outlet></router-outlet>
+    
+</div>
+
