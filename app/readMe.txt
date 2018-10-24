@@ -11,21 +11,21 @@ membres
 competences
   -recherche-competence // par mot clef         C
   -liste-competence                             D
-  -suprime-competence                       D
+  -supprime-competence                       D
   -cree-competence               C
-  -emprunte-competence //cree un tuple dans la collection Reservation
+  -utilisation-competence //cree un tuple dans la collection Reservation    C
   
 biens
   -recherche-bien // par mot clef               C
   -liste-bien                                   D
-  -suprime-bien                       D
+  -supprime-bien                       D
   -cree-bien               C
-  -emprunte-bien //cree un tuple dans la collection Reservation
+  -emprunte-bien //cree un tuple dans la collection Reservation     C
   
 reservations // à revoir (associé a un membre)
   -recherche-reservation                         C
   -liste-reservation                          D
-  -suprime-reservation                       D
+  -supprime-reservation                       D
 
 
 
