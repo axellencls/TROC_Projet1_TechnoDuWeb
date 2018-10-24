@@ -1,8 +1,12 @@
+Manon : D
+Axelle : C
+
+
 Module / Component :
 
 membres
-  -inscription
-  -desactivation
+  -inscription                 C
+  -desactivation               D
 
 competences
   -recherche-competence // par mot clef         C
@@ -28,5 +32,5 @@ reservations // à revoir (associé a un membre)
 
 Serveur :
 
-recherche de biens par mot clef
-recherche de compétence par mot clef
+recherche de biens par mot clef                    C
+recherche de compétence par mot clef               C
