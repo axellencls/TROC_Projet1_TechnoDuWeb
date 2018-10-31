@@ -1,3 +1,3 @@
 Inscription : probleme car mdp dans la route (visible)
 Probleme de redirection ...
-
+erifie seulement l'email avant de creer le membre
