@@ -6,7 +6,7 @@ Module / Component :
 
 membres
   -inscription                 C
-  -desactivation               D
+  -desactivation  (+authentification)             D
 
 competences
   -recherche-competence // par mot clef         C
