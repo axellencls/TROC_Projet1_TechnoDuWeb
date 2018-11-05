@@ -1,0 +1,43 @@
+<div>
+  <h2>Inscription</h2>
+  <form *ngIf="!dejaInscrit; else elseBlock" (ngSubmit)="onSubmit(inscriptionForm)" #inscriptionForm="ngForm">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" required placeholder="entrez un email correct" [(ngModel)]="email" name="email"/>
+    </div>
+    <div class="form-group">
+    <label for="mdp">Mot de passe</label>
+      <input type="text" class="form-control" id="mdp" required placeholder="entrez un mdp" [(ngModel)]="mdp" name="mdp"/>
+    </div>
+    <div class="form-group">
+<label for="nom">Nom</label>
+      <input type="text" class="form-control" id="nom" required placeholder="entrez votre nom" [(ngModel)]="nom" name="nom"/>
+    </div>
+    <div class="form-group">
+      <label for="prenom">Prénom</label>
+      <input type="text" class="form-control" id="prenom" required placeholder="entrez votre prenom" [(ngModel)]="prenom" name="prenom"/>
+    </div>
+    <div class="form-group">
+    <label for="role">Role</label>
+      <input type="text" class="form-control" id="role" required placeholder="0 pour utilisateur lambda / 1 pour admin" [(ngModel)]="role" name="role"/>
+    </div>
+    <div class="form-group">
+<label for="ville">Ville</label>
+      <input type="text" class="form-control" id="ville" required placeholder="entrez votre ville" [(ngModel)]="ville" name="ville"/>
+    </div>
+        <div class="form-group">
+<label for="adresse">Adresse</label>
+      <input type="text" class="form-control" id="adresse" required placeholder="entrez votre adresse" [(ngModel)]="adresse" name="adresse"/>
+</div>
+<div class="form-group">
+<label for="tel">Telephone</label>
+      <input type="text" class="form-control" id="tel" required placeholder="entrez votre numero de telephone" [(ngModel)]="tel" name="tel"/>
+    </div>
+    <button type="submit">Soumettre</button>
+    
+  </form>
+  <ng-template #elseBlock>
+    <p>Bonjour {{membres[0].prenom}} {{membres[0].nom}}, vous êtes déjà inscrit avec l'email {{membres[0].email}} ! 
+  </ng-template>
+</div>
+

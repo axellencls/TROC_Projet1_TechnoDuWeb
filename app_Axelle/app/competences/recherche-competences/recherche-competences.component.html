@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <div *ngIf="competences[0]!=null; else elseBlock">
+      Membre retrouvé :
+      <ul>    
+	<li *ngFor="let c of competences"> {{c.id}} {{c.emailProprio}} {{c.motsCles}} {{c.description}} {{c.disponibilite}}</li>
+      </ul>
+    </div>
+    <ng-template #elseBlock>
+      <p> Aucune competence retrouvé ...</p>
+    </ng-template>
+  </body>
+</html>
