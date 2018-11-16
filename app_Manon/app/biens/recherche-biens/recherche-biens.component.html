@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <div *ngIf="biens[0]!=null; else elseBlock">
+      Biens retrouvées :
+      <ul>    
+	<li *ngFor="let b of biens"> {{b.motsCles}} {{b.lienPhoto}}  {{b.prix}} {{b.emailProprio}} {{b.disponible}}</li>
+      </ul>
+    </div>
+    <ng-template #elseBlock>
+      <p> Aucune bien retrouvé ...</p>
+    </ng-template>
+  </body>
+</html>
