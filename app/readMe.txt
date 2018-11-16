@@ -5,11 +5,11 @@ Axelle : C
 Module / Component :
 
 membres
-  -inscription                 C
+  -FAIT : inscription                 C
   -desactivation  (+authentification)             D
 
 competences
-  -recherche-competence // par mot clef         C
+  -FAIT : recherche-competence // par mot clef         C
   -liste-competence                             D
   -supprime-competence                       D
   -cree-competence               C
