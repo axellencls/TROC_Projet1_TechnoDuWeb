@@ -10,14 +10,14 @@ membres
 
 competences
   -FAIT : recherche-competence // par mot clef         C
-  -liste-competence                             D
+  -FAIT : liste-competence                             D
   -supprime-competence                       D
   -cree-competence               C
   -utilisation-competence //cree un tuple dans la collection Reservation    C
   
 biens
   -recherche-bien // par mot clef               C
-  FAIT : -liste-bien                                   D
+  -FAIT : liste-bien                                   D
   -supprime-bien                       D
   -cree-bien               C
   -emprunte-bien //cree un tuple dans la collection Reservation     C
