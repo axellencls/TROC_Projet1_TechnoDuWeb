@@ -17,7 +17,7 @@ competences
   
 biens
   -recherche-bien // par mot clef               C
-  -liste-bien                                   D
+  FAIT : -liste-bien                                   D
   -supprime-bien                       D
   -cree-bien               C
   -emprunte-bien //cree un tuple dans la collection Reservation     C
