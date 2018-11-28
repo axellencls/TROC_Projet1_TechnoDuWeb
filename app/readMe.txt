@@ -24,7 +24,7 @@ biens
   
 reservations // à revoir (associé a un membre)
   -recherche-reservation                         C
-  -liste-reservation                          D
+  X : -liste-reservation                          D
   -supprime-reservation                       D
 
 
