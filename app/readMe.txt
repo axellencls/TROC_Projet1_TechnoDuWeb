@@ -9,7 +9,7 @@ membres
 
 competences
   -Manon lundi 3/12 : supprime-competence                       D
-  -Axelle lundi 3/12 : cree-competence               C
+  -Axelle lundi 3/12 : cree-competence  A MOITIE FAIT : METTTRE LISTE DEROULANTE ET ATTENTION VERSION FINALE AJOUTER PRIX !            C
   -Axelle lundi  3/12: utilisation-competence //cree un tuple dans la collection Reservation    C
   
 biens
