@@ -14,7 +14,7 @@ competences
   
 biens
   -Manon lundi 3/12 : supprime-bien                       D
-  - Axelle lundi 3/12 : cree-bien               C
+  - Axelle lundi 3/12 : cree-bien => IL MANQUE : PHOTO et PAS DE VERIFICATION SI UN BIEN EXISTE DEJA MAIS INCREMENTATION ID OK      C
   - Manon lundi 3/12: emprunte-bien //cree un tuple dans la collection Reservation     C
   
 reservations // à revoir (associé a un membre)
