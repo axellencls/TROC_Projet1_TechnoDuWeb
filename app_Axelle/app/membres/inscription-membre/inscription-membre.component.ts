@@ -32,9 +32,14 @@ export class InscriptionMembreComponent {
      //this.vuesEchanges=true;
      //recupere les saisies
      let emailSaisi = inscriptionForm.controls['email'].value
+     let mdpSaisi = inscriptionForm.controls['mdp'].value
+     let nomSaisi = inscriptionForm.controls['nom'].value
      let prenomSaisi = inscriptionForm.controls['prenom'].value
+     let roleSaisi = inscriptionForm.controls['role'].value
+     let villeSaisi = inscriptionForm.controls['ville'].value
+     let adresseSaisi = inscriptionForm.controls['adresse'].value
+     let telSaisi = inscriptionForm.controls['tel'].value
   	     //verification que l'utilisateur ne soit pas deja inscrit (verification de lemail via getOneMembre())
-	     console.log("onSubmit");
   	     this.route.params.subscribe(params=>{
 	     	     console.log("avant demande getOneMembre avec email : "+emailSaisi);
 			this.membresService.getOneMembre(emailSaisi).subscribe(res =>
@@ -45,7 +50,7 @@ export class InscriptionMembreComponent {
 			   this.dejaInscrit = true; //utilisateur deja inscrit !
 			   }else {
 			   console.log("Membre PAS INSCRIT : inscription en cours");
-			   let membreAajouter = [emailSaisi, prenomSaisi]
+			   let membreAajouter = [emailSaisi, mdpSaisi,nomSaisi, prenomSaisi, roleSaisi, villeSaisi, adresseSaisi, telSaisi];
 			   this.membresService.addMembre(membreAajouter).subscribe(res =>
 			{
 			console.log(res);

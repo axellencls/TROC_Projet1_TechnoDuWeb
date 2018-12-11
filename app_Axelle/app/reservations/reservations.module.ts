@@ -8,7 +8,7 @@ import { ReservationsService } from './reservations.service';
 import { RechercheReservationComponent } from './recherche-reservation/recherche-reservation.component';
 
 const routes: Routes=[
-      
+      {path:':resId', component: RechercheReservationComponent},
 ];
 
 @NgModule({

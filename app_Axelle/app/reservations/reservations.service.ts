@@ -8,8 +8,9 @@ export class ReservationsService {
 
   constructor(private http: HttpClient) { }
 
-  getReservationsByProprioEmail(parametre) :Observable<any> {
-    let url =  "http://localhost:8888/reservations";
+  getReservationWithId(parametre) :Observable<any> {
+    let url =  "http://localhost:8888/reservations/"+parametre;
+         console.log("Dans recherche reservation.service.ts avec "+url);
      return this.http.get(url);
      }	    
 }

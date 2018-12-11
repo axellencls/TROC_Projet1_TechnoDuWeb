@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import {CompetencesService} from '../competences.service';
 import { Params, ActivatedRoute } from '@angular/router';
 
@@ -16,8 +15,8 @@ export class RechercheCompetencesComponent {
 
   ngOnInit() {
   this.route.params.subscribe(params=>{
-  console.log("Recherche competence component,  param.kw : "+params.kw);
-	this.competencesService.getCompetencesWithKeyWord(params.kw).subscribe(res => this.competences = res);
+  console.log("Recherche competence component,  params.compMotCle : "+params.compMotCle);
+	this.competencesService.getCompetencesWithKeyWord(params.compMotCle).subscribe(res => this.competences = res);
 		});
   }
 }

@@ -13,5 +13,5 @@ export class AppComponent {
   email='';
   compMotCle='';
   bienMotCle='';
-  reservationProprioEmail='';
+  resId='';
 }

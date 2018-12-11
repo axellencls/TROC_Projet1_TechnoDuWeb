@@ -13,7 +13,7 @@ export class RechercheReservationComponent{
 
   ngOnInit() {
   this.route.params.subscribe(params=>{
-  console.log("Recherche reservation component,  params.resId : "+params.resId);
+  console.log("Recherche reservation component,  params.resId : "+params.resMotCle);
 	this.reservationsService.getReservationWithId(params.resId).subscribe(res => this.reservation = res);
 		});
   }

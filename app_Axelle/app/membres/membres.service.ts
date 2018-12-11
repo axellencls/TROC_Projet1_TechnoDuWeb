@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class MembresService {
-       
+  public pageLogin = true;
   constructor(private http: HttpClient) { }
 
   getAllMembres(): Observable<any> {
@@ -18,13 +18,20 @@ export class MembresService {
      let url =  "http://localhost:8888/membres/"+parametre;
      console.log("Dans service membres.service.ts avec "+url);
      return this.http.get(url);
-     }
-
-    addMembre(membre) : Observable<any> {
+	}
+	
+  addMembre(membre) : Observable<any> {
      let url =  "http://localhost:8888/membres/add/"+membre;
      console.log("Dans service membres.service.ts avec "+url);
      return this.http.get(url);
-     }
+   }
 
-	
+   connexion(cEmail, mdp, callback)  : Observable<any> {
+     let url =  "http://localhost:8888/membres/connexion/"+cEmail+"/"+mdp;
+     return this.http.get(url);
+   }
+
+
+
+  
 }

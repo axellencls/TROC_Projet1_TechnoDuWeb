@@ -11,15 +11,15 @@ import { NgForm } from '@angular/forms';
 })
 export class InscriptionMembreComponent {
        public membres: Object[];
-       public vuesEchanges=false;
-       private email: string;
-       private mdp: string;
-       private nom: string;
-       private prenom: string;
-       private role: string="0"; // INT ???
-       private ville: string;
-       private adresse: string;
-       private tel: string;
+      // public vuesEchanges=false;
+       public email: string;
+       public mdp: string;
+       public nom: string;
+       public prenom: string;
+       public role: string="0"; // INT ???
+       public ville: string;
+       public adresse: string;
+       public tel: string;
        public dejaInscrit = false;
   constructor(private membresService : MembresService, private route: ActivatedRoute) { }
 
@@ -29,9 +29,16 @@ export class InscriptionMembreComponent {
   //soumission du formulaire par l'utilisateur
   onSubmit(inscriptionForm: NgForm) {
      if(inscriptionForm.valid) {
+     //this.vuesEchanges=true;
      //recupere les saisies
      let emailSaisi = inscriptionForm.controls['email'].value
+     let mdpSaisi = inscriptionForm.controls['mdp'].value
+     let nomSaisi = inscriptionForm.controls['nom'].value
      let prenomSaisi = inscriptionForm.controls['prenom'].value
+     let roleSaisi = inscriptionForm.controls['role'].value
+     let villeSaisi = inscriptionForm.controls['ville'].value
+     let adresseSaisi = inscriptionForm.controls['adresse'].value
+     let telSaisi = inscriptionForm.controls['tel'].value
   	     //verification que l'utilisateur ne soit pas deja inscrit (verification de lemail via getOneMembre())
 	     console.log("onSubmit");
   	     this.route.params.subscribe(params=>{
@@ -44,7 +51,7 @@ export class InscriptionMembreComponent {
 			   this.dejaInscrit = true; //utilisateur deja inscrit !
 			   }else {
 			   console.log("Membre PAS INSCRIT : inscription en cours");
-			   let membreAajouter = [emailSaisi, prenomSaisi]
+			   let membreAajouter = [emailSaisi, mdpSaisi,nomSaisi, prenomSaisi, roleSaisi, villeSaisi, adresseSaisi, telSaisi];
 			   this.membresService.addMembre(membreAajouter).subscribe(res =>
 			{
 			console.log(res);
@@ -53,7 +60,7 @@ export class InscriptionMembreComponent {
 
 			});
 		});
-					   this.vuesEchanges=true;		
+					   		
 		}
   }
 

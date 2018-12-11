@@ -1,0 +1,30 @@
+<div>
+  <h2>Création d'un bien</h2>
+  <form *ngIf="!dejaExistant; else elseBlock" (ngSubmit)="onSubmit(bienForm)" #bienForm="ngForm">
+    <div class="form-group">
+      <label for="motsCles">Mots-clés (Veuillez les séparer par un tiret SVP)</label>
+      <input type="text" class="form-control" id="motsCles" required placeholder="Veuillez séparer vos mots-clés par un tiret '-'" [(ngModel)]="motsCles" name="motsCles"/>
+      </div>
+      <div class="form-group">
+	<label for="image">chosissez une photo</label>
+	        <image-upload url="https://httpbin.org/status/200" class="form-control" id="image" [(ngModel)]="image" name="image"></image-upload>
+
+    <!-- <input type="text" class="form-control" id="image" [(ngModel)]="image" name="image"/> -->
+    <!-- <input type="image" id="image" alt="Login" src="/media/examples/login-button.png"> -->
+    </div>
+     <div class="form-group">
+    <label for="prix">Prix</label>
+      <input type="text" class="form-control" id="prix" required placeholder="entrez le prix du bien" [(ngModel)]="prix" name="prix"/>
+    </div>
+    <div class="form-group">
+      <label for="emailProprio">Email</label>
+      <input type="text" class="form-control" id="emailProprio" required placeholder="entrez votre email" [(ngModel)]="emailProprio" name="emailProprio"/>
+    </div>
+    
+    <button type="submit">Creer</button>
+    
+  </form>
+  <ng-template #elseBlock>
+    Le bien existe deja !
+  </ng-template>
+</div>

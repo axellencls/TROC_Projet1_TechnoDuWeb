@@ -1,0 +1,27 @@
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #888;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+	text-align:center;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.pageLogin{
+	display: flex;
+}
+
+

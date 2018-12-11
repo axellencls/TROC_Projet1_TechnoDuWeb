@@ -3,22 +3,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import { ImageUploadModule } from "angular2-image-upload";
 
 import { RechercheBiensComponent } from './recherche-biens/recherche-biens.component';
+import { ListeBienComponent } from './liste-bien/liste-bien.component';
 import { BiensService } from './biens.service';
+import { CreeBienComponent } from './cree-bien/cree-bien.component';
 
-const routes: Routes=[
-      
+const routes: Routes=[   
+   {path:':bienMotCle', component: RechercheBiensComponent},
 ];
 
+
 @NgModule({
-declarations: [RechercheBiensComponent],
-  imports: [
-    HttpClientModule, CommonModule, FormsModule, RouterModule.forChild(routes)
-  ],
-  exports: [RechercheBiensComponent],
-  providers: [BiensService],
-  bootstrap: []
+  declarations: [ListeBienComponent, RechercheBiensComponent, CreeBienComponent],
+  imports : [ HttpClientModule, FormsModule, CommonModule, RouterModule.forChild(routes),     ImageUploadModule.forRoot()],
+  exports : [ListeBienComponent, RechercheBiensComponent, CreeBienComponent],
+  providers : [BiensService]
 })
 export class BiensModule { }
-

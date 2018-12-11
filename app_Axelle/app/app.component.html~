@@ -4,14 +4,34 @@
   </header>
   <main>
     <app-inscription-membre></app-inscription-membre>
-    
-    <section>
+
       <app-liste-membres></app-liste-membres>
       <label> Entrez l'email d'un membre </label> <input type="text" [(ngModel)]="email"/> {{email}}
       <!--<app-recherche-membre [nomDuMembre]="email"></app-recherche-membre>-->
       <a [routerLink]="['/membres', email]">Rechercher le membre avec l'email {{email}}</a>
       <router-outlet></router-outlet>
-    </section>
+
+      <label> Rechercher des compétences par un de leur mot-clés </label> <input type="text" [(ngModel)]="compMotCle"/> {{compMotCle}}
+      <!--<app-recherche-membre [nomDuMembre]="email"></app-recherche-membre>-->
+      <a [routerLink]="['/competences', compMotCle]">Rechercher</a>
+      <router-outlet></router-outlet>
+          <app-cree-competence></app-cree-competence>
+
+
+      <div>
+	<app-cree-bien></app-cree-bien>
+		<app-liste-bien></app-liste-bien>
+	</div>
+	
+	<label> Rechercher des biens par un de leur mot-clés </label> <input type="text" [(ngModel)]="bienMotCle"/> {{bienMotCle}}
+      <!--<app-recherche-membre [nomDuMembre]="email"></app-recherche-membre>-->
+      <a [routerLink]="['/biens', bienMotCle]">Rechercher</a>
+      <router-outlet></router-outlet>
+
+	<label> Rechercher une reservation par son ID </label> <input type="text" [(ngModel)]="resId"/> {{compMotCle}}
+      <a [routerLink]="['/reservations', resId]">Rechercher</a>
+      <router-outlet></router-outlet>
+      
   </main>
   <footer>
     

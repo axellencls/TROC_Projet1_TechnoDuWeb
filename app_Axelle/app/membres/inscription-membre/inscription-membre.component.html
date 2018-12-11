@@ -1,6 +1,6 @@
 <div>
   <h2>Inscription</h2>
-  <form *ngIf="!dejaInscrit; else elseBlock" (ngSubmit)="onSubmit(inscriptionForm)" #inscriptionForm="ngForm">
+  <form *ngIf="!dejaInscrit; else elseBlock" class="form" (ngSubmit)="onSubmit(inscriptionForm)" #inscriptionForm="ngForm">
     <div class="form-group">
       <label for="email">Email</label>
       <input type="text" class="form-control" id="email" required placeholder="entrez un email correct" [(ngModel)]="email" name="email"/>

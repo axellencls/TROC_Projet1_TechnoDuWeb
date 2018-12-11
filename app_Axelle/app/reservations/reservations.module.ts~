@@ -4,20 +4,19 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import {FormsModule} from '@angular/forms';
 
-import { RechercheBiensComponent } from './recherche-reservations/recherche-reservations.component';
 import { ReservationsService } from './reservations.service';
 import { RechercheReservationComponent } from './recherche-reservation/recherche-reservation.component';
 
 const routes: Routes=[
-      
+      {path:':resMotCle', component: RechercheReservationComponent},
 ];
 
 @NgModule({
-declarations: [RechercheReservationsComponent, RechercheReservationComponent],
+declarations: [RechercheReservationComponent],
   imports: [
     HttpClientModule, CommonModule, FormsModule, RouterModule.forChild(routes)
   ],
-  exports: [RechercheReservationsComponent],
+  exports: [RechercheReservationComponent],
   providers: [ReservationsService],
   bootstrap: []
 })

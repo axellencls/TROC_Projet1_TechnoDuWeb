@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {MembresService} from '../membres.service';
 import { Params, ActivatedRoute } from '@angular/router';
 

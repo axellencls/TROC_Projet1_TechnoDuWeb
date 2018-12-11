@@ -1,0 +1,20 @@
+.form{
+
+}
+
+h2{
+    text-align: center;
+}
+
+.form-group{
+    padding: 0.5em 1em;
+}
+
+input, button, a{
+ padding:3px;
+ border:1px solid #9DBAD7;
+ border-radius:5px;
+ width:200px;
+ box-shadow:1px 1px 2px #C0C0C0 inset;
+ margin-left: 1.5em;
+}

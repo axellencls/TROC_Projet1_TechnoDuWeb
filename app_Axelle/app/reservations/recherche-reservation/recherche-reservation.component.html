@@ -1,3 +1,18 @@
-<p>
-  recherche-reservation works!
-</p>
+<html>
+  <body>
+    <div *ngIf="reservation[0]!=null; else elseBlock">
+      Compétences retrouvées :
+      <ul>    
+		<li *ngFor="let r of reservation"> {{r.idService}} {{r.emailProprio}} {{r.emailUtilisateur}} {{r.date}}
+
+
+
+	
+		</li>
+      </ul>
+    </div>
+    <ng-template #elseBlock>
+      <p> Aucune reservation retrouvée ...</p>
+    </ng-template>
+  </body>
+</html>

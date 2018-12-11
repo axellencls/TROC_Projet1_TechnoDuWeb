@@ -1,0 +1,10 @@
+<html>
+  <body>
+  <div>
+ Liste des biens :
+  <ul>    
+    <li *ngFor="let bien of biens"> {{bien.motsCles}} {{bien.lienPhoto}} {{bien.prix}} {{bien.emailProprio}} <label *ngIf="bien.disponible==1"> Indisponible pour le moment </label> </li>
+  </ul>
+  </div>
+  </body>
+</html>

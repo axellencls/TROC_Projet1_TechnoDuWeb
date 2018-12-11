@@ -1,9 +1,29 @@
 <html>
   <body>
     <div *ngIf="competences[0]!=null; else elseBlock">
-      Membre retrouvé :
+      Compétences retrouvées :
       <ul>    
-	<li *ngFor="let c of competences"> {{c.id}} {{c.emailProprio}} {{c.motsCles}} {{c.description}} {{c.disponibilite}}</li>
+		<li *ngFor="let c of competences"> {{c.id}} {{c.emailProprio}} {{c.motsCles}} {{c.description}}
+
+
+			<div *ngFor="let dis of c.disponibilite">
+			<ul>
+			<li *ngFor="let jour of dis | keyvalue"> {{jour.key}}
+				
+				<div *ngFor="let horaires of jour.value">
+					<ul> 
+					<li *ngFor="let heures of horaires | keyvalue"> {{heures.key}} : {{heures.value}}
+						
+					</li>
+					</ul>
+				</div>
+				
+				
+			</li>
+			</ul>
+			</div>
+
+		</li>
       </ul>
     </div>
     <ng-template #elseBlock>
@@ -11,3 +31,4 @@
     </ng-template>
   </body>
 </html>
+

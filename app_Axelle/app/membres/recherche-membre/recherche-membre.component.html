@@ -1,13 +1,10 @@
 <html>
   <body>
-    <div *ngIf="membres[0]!=null; else elseBlock">
-      Membre retrouvé :
-      <ul>    
-	<li *ngFor="let membre of membres"> {{membre.prenom}} {{membre.nom}} {{membre.email}} </li>
-      </ul>
-    </div>
-    <ng-template #elseBlock>
-      <p> Aucun membre retrouvé...</p>
-    </ng-template>
+  <div>
+ Membre retrouvé :
+  <ul>    
+    <li *ngFor="let membre of membres"> {{membre.prenom}} {{membre.nom}} {{membre.email}} </li>
+  </ul>
+  </div>
   </body>
 </html>

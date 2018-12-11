@@ -1,0 +1,115 @@
+<head>
+</head>
+<body>
+<div>
+  <h2>Création d'une competence</h2>
+  <form *ngIf="!dejaExistant; else elseBlock" (ngSubmit)="onSubmit(competenceForm)" #competenceForm="ngForm">
+    <div class="form-group">
+      <div class="form-group">
+      <label for="emailProprio">Email</label>
+      <input type="text" class="form-control" id="emailProprio" required placeholder="entrez votre email" [(ngModel)]="emailProprio" name="emailProprio"/>
+    </div>
+      <label for="motsCles">Mots clés (Veuillez les séparer par un tiret SVP)</label>
+      <input type="text" class="form-control" id="motsCles" required placeholder="Veuillez séparer vos mots-clés par un tiret '-'" [(ngModel)]="motsCles" name="motsCles"/>
+      </div>
+      <div class="form-group">
+
+	<label for="description">Description :<br></label>
+	<input type="text" class="form-control" id="description" required [(ngModel)]="description" name="description"/>
+
+	
+</div>
+
+     <div class="form-group">
+       <p>Disponibilite</p><br>
+	  <label for="lundi_de">Lundi de </label> 
+	  de
+	  <select class="form-control" [(ngModel)]="lundi_de" name="lundi_de">
+	    <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+	  <label for="lundi_">à</label> 
+	    <select class="form-control" [(ngModel)]="lundi_a" name="lundi_a">
+	    à <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+
+
+<br><label for="mardi_de">Mardi</label> 
+	de
+	  <select class="form-control" [(ngModel)]="mardi_de" name="mardi_de">
+	    <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+	  <label for="mardi_a">à</label> 
+	    <select class="form-control" [(ngModel)]="mardi_a" name="mardi_a">
+	    à <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+
+<br><label for="mercredi_de">Mercredi</label> 
+de
+	  <select class="form-control" [(ngModel)]="mercredi_de" name="mercredi_de">
+	    <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+	  <label for="mercredi_a">à</label> 
+	    <select class="form-control" [(ngModel)]="mercredi_a" name="mercredi_a">
+	    à <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+
+<br><label for="jeudi_de">Jeudi</label> 
+	  de
+	  <select class="form-control" [(ngModel)]="jeudi_de" name="jeudi_de">
+	    <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+	  <label for="jeudi_a">à</label> 
+	    <select class="form-control" [(ngModel)]="jeudi_a" name="jeudi_a">
+	    à <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+
+<br><label for="vendredi_de">Vendredi</label> 
+	 de
+	  <select class="form-control" [(ngModel)]="vendredi_de" name="vendredi_de">
+	    <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+	  <label for="vendredi_a">à</label> 
+	    <select class="form-control" [(ngModel)]="vendredi_a" name="vendredi_a">
+	    à <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+<br><label for="samedi_de">Samedi</label> 
+de
+	  <select class="form-control" [(ngModel)]="samedi_de" name="samedi_de">
+	    <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+	  <label for="samedi_a">à</label> 
+	    <select class="form-control" [(ngModel)]="samedi_a" name="samedi_a">
+	    à <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+
+<br><label for="dimanche_de">Dimanche</label> 
+	de
+	  <select class="form-control" [(ngModel)]="dimanche_de" name="dimanche_de">
+	    <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	  </select>
+	  <label for="dimanche_a">à</label> 
+	    <select class="form-control" [(ngModel)]="dimanche_a" name="dimanche_a">
+	    à <option *ngFor="let i of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]" name="disponibilite" value="{{i}}">{{i}}</option>
+	    </select>
+
+
+
+
+
+
+	    
+     </div>
+      <div class="form-group">
+    <label for="prix">Prix</label>
+      <input type="text" class="form-control" id="prix" required placeholder="entrez le prix de la competence" [(ngModel)]="prix" name="prix"/>
+    </div>
+    
+    
+    <button type="submit">Creer</button>
+    
+  </form>
+  <ng-template #elseBlock>
+    Le bien existe deja !
+  </ng-template>
+</div>
+</body>
