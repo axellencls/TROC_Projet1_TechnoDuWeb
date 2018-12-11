@@ -6,5 +6,5 @@ message erreur creation competence quand membre existe pas
 disponibilite : disponibilite competence => verifier le format quand on le crée et on le liste
 ajouter prix quand on liste comeptence
 liste competence qui vient detre crée
-probleme serveur 
 Dynamique page appuie apres creer bien ou comp
+dynamique page
