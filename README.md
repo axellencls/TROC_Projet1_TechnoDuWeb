@@ -15,3 +15,4 @@ Message d'erreur quand un utiluisateur inconnu souhaite creer un bien ou une com
 
 A FAIRE :
 REcherche membre (pour laffichage)
+Enlever image et liste
