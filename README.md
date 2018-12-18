@@ -10,3 +10,8 @@ Dynamique page appuie apres creer bien ou comp
 
 A FAIRE :
 Message d'erreur quand un utiluisateur inconnu souhaite creer un bien ou une competence
+
+
+
+A FAIRE :
+REcherche membre (pour laffichage)
